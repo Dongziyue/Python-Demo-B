@@ -40,3 +40,12 @@ print(r'''
 line...\n
     another line...
 ''')
+
+'''
+Scanner scanner = new Scanner(System.in)
+String name = scanner.nextLine();
+System.out.println(name);
+'''
+# name = input()
+
+print(input())
