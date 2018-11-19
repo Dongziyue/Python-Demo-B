@@ -25,6 +25,18 @@ print(True)
 
 print(False)
 
-s = R'Hello, \nWorld!'
+s = 'hello, World!'
 
-print(s)
+print(s.capitalize())
+
+print(s.center(19))
+
+print(s.zfill(20))  # z = zero
+
+print(s.count('l', 0, 4))
+
+print(s.endswith('o', 0, 5))
+
+print(s.startswith('e', 1, 5))
+
+print(s.find(','))
