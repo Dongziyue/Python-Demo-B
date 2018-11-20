@@ -3,5 +3,9 @@
 # 编程找出 1000 以内的所有完数
 
 for i in range(1, 1000):
-    if True:
+    sum = 0
+    for j in range(1, i // 2 + 2):
+        if i % j == 0:
+            sum += j
+    if i == sum:
         print(i)
