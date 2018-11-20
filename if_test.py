@@ -16,7 +16,7 @@ if ():
 
 """
 
-score = 95
+score = 55
 
 if score >= 90:
     print('A')
@@ -32,3 +32,7 @@ if score >= 60: print('passed...')
 # (condition)?value1:value2 三目运算符
 
 # value1 if condition else value2 Python
+
+print('A' if score >= 90 else ('B' if score >= 60 else 'C'))
+
+
