@@ -38,7 +38,7 @@ d['key'] = 'value'
 
 print(d)
 
-d.update({'new key':'new value'})
+d.update({'new key': 'new value'})
 
 print(d)
 
@@ -53,6 +53,36 @@ d.pop('key')
 
 print(d)
 
+# d.popitem()
+# d.popitem()
+# d.popitem()
+
+# d.clear()
+
+print(len(d))
+
+print(d.keys())
+
+for key in d:
+    print(key, ':', d[key])
+
+for value in d.values():
+    print(value)
+
+for key, value in d.items():
+    print(key, value)
+
 # del d
 #
 # print(d)
+
+if 'name' in d:
+    print(d['name'])
+
+print(d.get('name1'))
+
+key = []
+
+d = {'key': 'value', 123: '123', (1,): 'tuple'}
+
+print(d)
