@@ -3,6 +3,10 @@
 
 import urllib.request
 
-url = 'https://static.yximgs.com/s1/videos/www_main-059ce9beee.mp4'
+url = 'http://jandan.net/ooxx'
 
-urllib.request.urlretrieve(url, 'test.mp4')
+with urllib.request.urlopen(url) as f:
+    for line in f.readlines():
+        print(line.decode('UTF-8'))
+
+# urllib.request.urlretrieve(url, 'test.mp4')
