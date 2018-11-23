@@ -163,4 +163,37 @@ def fn_recursive(n):
 
 print(fn_recursive(5))
 
-# 120
+
+
+def fn_higher(fn, *numbers):
+    s = 0
+    for number in numbers:
+        s += fn(number)
+    return s
+
+
+print(fn_higher(abs, 1, -20, 30, -100))
+print(fn_higher(power, 1, -20, 30, -100))
+
+numbers = [2, 3, 4]
+
+print(list(map(power, numbers)))
+
+
+from functools import reduce
+
+
+# reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
+
+print(reduce(power, numbers))
+
+
+def fn(x, y):
+    return x * 10 + y
+
+
+print(reduce(fn, [1, 3, 5, 7, 9]))
+
+# 2^3^4
+
+print(list(sorted([1, 2, -100, 9, -11], key=abs)))
