@@ -32,10 +32,10 @@
 #         print('False: ',  value)
 
 
-# with open('read_write_test.py', encoding='UTF-8') as f:
-#     print(type(f))
-    # for x in f:
-    #     print(x, end='')
+with open('read_write_test.py', encoding='UTF-8') as f:
+    print(type(f))
+    for x in f:
+        print(x, end='')
 
 # with open('read_write_test.py', encoding='UTF-8') as f:
 #     for line in f.readlines():
