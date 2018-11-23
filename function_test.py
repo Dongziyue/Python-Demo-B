@@ -1,5 +1,3 @@
-
-
 # print(abs(-1))
 # print(abs(-1, 0))
 # print(abs('a'))
@@ -14,6 +12,7 @@
 
 absolute = abs
 
+
 # print(absolute(-1))
 
 
@@ -23,6 +22,7 @@ def fn_multi_return_value(x, y):
 
 
 a, b = fn_multi_return_value(1, 2)
+
 
 # print(a, b)
 #
@@ -80,9 +80,26 @@ def fn_append(array=None):
     return array
 
 
+# print(fn_append([1, 2, 3]))
+# print(fn_append([1, 2, 3]))
+#
+# print(fn_append())
+# print(fn_append())
 
-print(fn_append([1, 2, 3]))
 
-print(fn_append())
-print(fn_append())
+def fn_sum(*number):
+    print(number)
+    s = 0
+    for n in number:
+        s += n
+    return s
+
+
+print(fn_sum(1, 2, 3, 4, 5))
+
+numbers = [1, 2, 3, 4, 5]
+
+print(fn_sum(numbers[0], numbers[1]))
+
+print(fn_sum(*numbers))
 
