@@ -95,25 +95,72 @@ def fn_sum(*number):
     return s
 
 
-print(fn_sum(1, 2, 3, 4, 5))
+# print(fn_sum(1, 2, 3, 4, 5))
 
 numbers = [1, 2, 3, 4, 5]
 
-print(fn_sum(numbers[0], numbers[1]))
 
-print(fn_sum(*numbers))
+# print(fn_sum(numbers[0], numbers[1]))
+
+# print(fn_sum(*numbers))
 
 
 def fn_keywords(email, password, **porps):
     print(email, password, porps)
 
-props = {'age':20, 'married':True}
 
-fn_keywords('tom@tom.com', '123', age=18, married=False)
-fn_keywords('tom@tom.com', '123')
-
-fn_keywords('jerry@tom.com', '123', age=props.get('age'), married=props.get('married'))
-fn_keywords('jerry@tom.com', '123', **props)
+props = {'age': 20, 'married': True}
 
 
+# fn_keywords('tom@tom.com', '123', age=18, married=False)
+# fn_keywords('tom@tom.com', '123')
+#
+# fn_keywords('jerry@tom.com', '123', age=props.get('age'), married=props.get('married'))
+# fn_keywords('jerry@tom.com', '123', **props)
 
+
+def fn_named_keywords(email, password, *, age, married=False):
+    print(email, password, age, married)
+
+
+fn_named_keywords('email...', 'password...', age=18, married=True)
+
+
+def fn_named_keywords(email, password, *args, age, married=False):
+    print(email, password, args, age, married)
+
+
+fn_named_keywords('e', 'p', 1, 2, 3, 4, 5, age=6)
+
+
+def f1(a, b, c=0, *args, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'args =', args, 'kw =', kw)
+
+
+def f2(a, b, c=0, *, d, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'kw =', kw)
+
+
+f1(1, 2, 3, 4, 5, 6)
+f1(1, 2, 3, 4, 5, 6, k=7)
+
+f2(1, 2, 3, d=4, k1=5, k2=6)
+
+
+def f3(a, b, c=0, *args, d, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'args=', args, 'd =', d, 'kw =', kw)
+
+
+f3(1, 2, 3, 4, 5, 6, d=7, k1=8, k2=9)
+
+
+def fn_recursive(n):
+    if n == 1:
+        return 1
+    else:
+        return n * fn_recursive(n - 1)
+
+
+print(fn_recursive(5))
+
+# 120
