@@ -103,3 +103,17 @@ print(fn_sum(numbers[0], numbers[1]))
 
 print(fn_sum(*numbers))
 
+
+def fn_keywords(email, password, **porps):
+    print(email, password, porps)
+
+props = {'age':20, 'married':True}
+
+fn_keywords('tom@tom.com', '123', age=18, married=False)
+fn_keywords('tom@tom.com', '123')
+
+fn_keywords('jerry@tom.com', '123', age=props.get('age'), married=props.get('married'))
+fn_keywords('jerry@tom.com', '123', **props)
+
+
+
