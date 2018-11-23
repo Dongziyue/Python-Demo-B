@@ -14,4 +14,23 @@
 
 absolute = abs
 
-print(absolute(-1))
+# print(absolute(-1))
+
+
+def fn_multi_return_value(x, y):
+    # ...
+    return x, y
+
+
+a, b = fn_multi_return_value(1, 2)
+
+print(a, b)
+
+print(fn_multi_return_value(0, -1))
+
+
+def fn_pass_test():
+    pass
+
+
+print(fn_pass_test())
