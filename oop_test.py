@@ -104,31 +104,69 @@
 # print(c.pi)
 
 
-class Clock(object):
+# class Clock(object):
+#
+#     def __init__(self, hour, minute, second):
+#         self.hour = hour
+#         self.minute = minute
+#         self.second = second
+#
+#
+# class Calendar(object):
+#
+#     def __init__(self, year, month, day):
+#         self.year = year
+#         self.month = month
+#         self.day = day
+#
+#
+# class CalendarClock(Calendar, Clock):
+#
+#     def __init__(self, year, month, day, hour, minute, second):
+#         Calendar.__init__(self, year, month, day)
+#         Clock.__init__(self, hour, minute, second)
+#
+#     def display(self):
+#         print('%d-%d-%d %d:%d:%d' % (self.year, self.month, self.day, self.hour, self.minute, self.second))
+#
+#
+# today = CalendarClock(2018, 11, 26, 11, 35, 12)
+# today.display()
 
-    def __init__(self, hour, minute, second):
-        self.hour = hour
-        self.minute = minute
-        self.second = second
+# from types import MethodType
+#
+#
+# class Human(object):
+#     __slots__ = ['set_name', 'name']
+#
+#
+# tom = Human()
+#
+# # tom.age = 18
+# tom.name = 'Tom'
+# print(tom.name)
+#
+#
+# def set_name(self, name):
+#     self.name = name
+# #
+# #
+# tom.set_name = MethodType(set_name, tom)
+#
+# tom.set_name('Thomas')
+#
+# print(tom.name)
 
 
-class Calendar(object):
+class Student(object):
 
-    def __init__(self, year, month, day):
-        self.year = year
-        self.month = month
-        self.day = day
+    def __init__(self, name):
+        self.name = name
 
-
-class CalendarClock(Calendar, Clock):
-
-    def __init__(self, year, month, day, hour, minute, second):
-        Calendar.__init__(self, year, month, day)
-        Clock.__init__(self, hour, minute, second)
-
-    def display(self):
-        print('%d-%d-%d %d:%d:%d' % (self.year, self.month, self.day, self.hour, self.minute, self.second))
+    def __str__(self):
+        return 'name: ' + self.name
 
 
-today = CalendarClock(2018, 11, 26, 11, 35, 12)
-today.display()
+tom = Student('Tom')
+
+print(tom)  # Java: Student tom = new Student(); System.out.println(tom); // FQN@HEX...
