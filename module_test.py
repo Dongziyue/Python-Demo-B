@@ -20,6 +20,12 @@
 # com.example.test.fn_test()
 
 
-from com.example.test import fn_test
+# from com.example.test import fn_test
 
-fn_test()
+# fn_test()
+
+
+# help('modules')
+
+# help('datetime')
+
